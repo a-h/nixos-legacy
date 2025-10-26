@@ -38,7 +38,6 @@
         hetzner-dedicated-x86_64 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
-            pkgs = pkgsForSystem "x86_64-linux";
             system = "x86_64-linux";
             adrianSSHKey = adrianSSHKey;
             rootSSHKey = rootSSHKey;
@@ -47,6 +46,7 @@
           modules = [
             ./systems/hetzner/dedicated/config.nix
             ./systems/hetzner/dedicated/dnsmasq.nix
+            { nixpkgs = pkgsForSystem "x86_64-linux"; }
           ];
         };
         builder-x86_64 = nixpkgs.lib.nixosSystem {
