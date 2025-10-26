@@ -2,7 +2,7 @@
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "UploadToCache",
+      "Sid": "NixCacheWrite",
       "Effect": "Allow",
       "Action": [
         "s3:AbortMultipartUpload",

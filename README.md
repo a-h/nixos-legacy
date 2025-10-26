@@ -143,4 +143,22 @@ nix store sign -k ~/nix-store-private-key.pem --store 's3://nix-cache?profile=mi
 ```
 
 It's also possible to copy `nix copy --to 's3://nix-cache?profile=minio-adrianhesketh-com&endpoint=minio.adrianhesketh.com' .#devShells.x86_64-linux.default` and then sign the store path.
-```
+
+## Goals
+
+Everything required to self-host a development and deployment environment.
+
+- Source control
+- CI/CD
+- Hypervisor
+- Kubernetes
+- Observability
+- Storage
+- Networking
+- Access control
+- Security
+  - Secrets management
+  - Encryption
+  - Authentication and authorization
+- Backup
+
