@@ -45,8 +45,8 @@
           };
           modules = [
             ./systems/hetzner/dedicated/config.nix
-            ./systems/hetzner/dedicated/dnsmasq.nix
-            { nixpkgs = pkgsForSystem "x86_64-linux"; }
+            ./systems/hetzner/dedicated/knot.nix
+            { nixpkgs.pkgs = pkgsForSystem "x86_64-linux"; }
           ];
         };
         builder-x86_64 = nixpkgs.lib.nixosSystem {

@@ -95,7 +95,6 @@
 
   environment.systemPackages = [
     pkgs.git
-    pkgs.nebula
     pkgs.tmux
     pkgs.unzip
     pkgs.vim

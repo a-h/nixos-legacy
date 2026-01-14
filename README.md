@@ -4,6 +4,26 @@ If you're making a lot of changes, skip the cache by adding the `--refresh` flag
 
 ## Tasks
 
+### sync-to-hetzner
+
+Copy the local directory and subdirectories to `/adrian/nixos` on cmptr.cc, creating it if it doesn't exist.
+
+```bash
+rsync -a --delete . adrian@cmptr.cc:/home/adrian/nixos-legacy/
+```
+
+### hetzner-dedicated-x86_64-live
+
+```bash
+nix run nixpkgs#nixos-rebuild -- \
+  switch \
+  --flake .#hetzner-dedicated-x86_64 \
+  --target-host adrian@cmptr.cc \
+  --build-host adrian@cmptr.cc \
+  --sudo \
+  --verbose
+```
+
 ### hetzner-dedicated-x86_64-switch
 
 ```bash
